@@ -8,7 +8,6 @@ h1 {
   color: #DBEDF3;
   font-family: "Arvo", cursive;
   text-shadow: 3px 0 #DA0463;
-
 }
 
 footer {
@@ -46,6 +45,18 @@ footer {
 
 .set {
   margin: 10% auto;
+  display: none;
+  animation: SlideDown 1.5s;
+}
+
+@keyframes SlideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translate(0);
+  }
 }
 
 .game-over {
@@ -64,7 +75,7 @@ footer {
 
 .drum {
   outline: none;
-  border: 10px solid #404B69;
+  border: 7px solid #404B69;
   font-size: 5rem;
   font-family: 'Arvo', cursive;
   line-height: 2;
@@ -78,4 +89,67 @@ footer {
   text-align: center;
   margin: 10px;
   background-color: white;
+}
+
+
+.instructuin {
+  color: rgb(255, 147, 15);
+  font-size: 3rem;
+  font-family: cursive;
+  background-color: rgb(83, 115, 19);
+  border-radius: 12px;
+  padding-bottom: 5px;
+  margin-bottom: 50px;
+  border: none;
+  animation: moveDown 1s;
+}
+
+.instructuin:hover {
+  box-shadow: 1px 1px 3px 2px rgb(140, 132, 126);
+  background-color: rgb(122, 156, 53);
+  transition: ease-in-out .3s;
+  height: 80px;
+  width: 280px;
+  color: white;
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  50% {
+    transform: translateY(30%);
+  }
+}
+
+.drumset-container {
+  overflow: hidden;
+  padding: 20px;
+  padding-bottom: 20px;
+  /* box-shadow: 0  -5px 10px;
+  border-radius: 5px;
+  margin-bottom: 20px; */
+}
+
+
+.instructuin2 {
+  display: none;
+  animation: slideUP .8s;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+@keyframes slideUP {
+  0% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    transform: translateY(-80%);
+  }
+}
+
+.footer {
+  margin: 30px auto;
 }
